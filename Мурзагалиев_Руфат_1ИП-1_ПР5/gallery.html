@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight — Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+    <header class="gallery-header">
+        <div class="header-content">
+            <h1><i class="fas fa-images"></i></h1>
+            <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Космос</span></p>
+        </div>
+        <nav class="main-nav">
+            <ul class="flex-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="gallery.html" class="active">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active">
+                    <i class="fas fa-th"></i> Сетка
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <h3><i class="fas fa-filter"></i>Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="nature">Природа</button> 
+                <button class="filter-btn" data-filter="city">Город</button>
+                <button class="filter-btn" data-filter="people">Люди</button>
+            </div>
+        </div>
+
+        <!-- ГАЛЕРЕЯ НА FLEXBOX -->
+        <div class="gallery-flex" id="image-gallery">
+            <!--Карточка 1-->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/1.jpg" alt="Земля и Луна" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="1">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Земля и Луна</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 марта 2024</p>
+                    <p class="image-description">Вид на Землю и Луну из космоса.</p>
+                    <div class="image-tags"><span class="tag">природа</span><span class="tag">пейзаж</span></div>
+                </div>
+            </article>
+
+            <!-- Карточка 2 -->
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="images/2.jpg" alt="Звездные поля" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Звездные поля</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 20 марта 2024</p>
+                    <p class="image-description">Глубокие звездные поля нашей галактики.</p>
+                    <div class="image-tags"><span class="tag">город</span><span class="tag">архитектура</span></div>
+                </div>
+            </article>
+
+            <!-- Карточка 3 -->
+            <article class="image-card" data-category="planets">
+                <div class="card-image">
+                    <img src="images/3.jpg" alt="Планеты" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="3">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Планеты</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 05 мая 2024</p>
+                    <p class="image-description">Разнообразие планет Солнечной системы.</p>
+                    <div class="image-tags"><span class="tag">животные</span><span class="tag">лес</span></div>
+                </div>
+            </article>
+
+            <!-- Карточка 4 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/4.jpg" alt="Млечный путь" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="4">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Млечный путь</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 18 июня 2024</p>
+                    <p class="image-description">Панорама ночного неба и Млечного пути.</p>
+                    <div class="image-tags"><span class="tag">природа</span><span class="tag">море</span></div>
+                </div>
+            </article>
+
+            <!-- Карточка 5 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/5.jpg" alt="Млечный путь 2" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="5">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Млечный путь</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 июля 2024</p>
+                    <p class="image-description">Млечный путь над океаном.</p>
+                    <div class="image-tags"><span class="tag">природа</span><span class="tag">море</span></div>
+                </div>
+            </article>
+
+            <!-- Карточка 6 -->
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/6.jpg" alt="Млечный путь 3" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="6">
+                            <i class="far fa-heart"></i> <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Млечный путь</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 4 августа 2024</p>
+                    <p class="image-description">Звездное небо в обсерватории.</p>
+                    <div class="image-tags"><span class="tag">природа</span><span class="tag">море</span></div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="gallery-info">
+            <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+            <p>Свет от Солнца до Земли идёт 8 минут 20 секунд.</p>
+        </aside>
+    </main>
+
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2026</span> Руфат. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
